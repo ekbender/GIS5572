@@ -6,10 +6,10 @@ app = Flask(__name__) # setup initial flask app; gets called throughout in route
 
 #change to run
 conn_params = {
-        "host":"db_IP",
-        "database": "lab1-2",
-        "user":"user",
-        "password":"password",
+        "host":"104.154.86.38",
+        "database": "lab0",
+        "user":"postgres",
+        "password":'ZDOF]@~"@3?E=F*u',
         "port": "5432"
 }
 
@@ -23,9 +23,9 @@ def get_polygon():
 
         query = """
             SELECT jsonb_build_object(
-                'type', 'feature',
-                'geometry', ST_AsGeoJSON(geom)::jsonb,
-                'properties', jsonb_build_object('id',id)
+                'type', 'Feature',
+                'geometry', ST_AsGeoJSON(shape)::jsonb,
+                'properties', jsonb_build_object('id',objectid)
             )
             FROM polygon
             LIMIT 1;
