@@ -6,10 +6,10 @@ app = Flask(__name__) # setup initial flask app; gets called throughout in route
 
 #change to run
 conn_params = {
-        "host":"104.154.86.38",
-        "database": "lab0",
-        "user":"postgres",
-        "password":'ZDOF]@~"@3?E=F*u',
+        "host":"",
+        "database": "",
+        "user":"",
+        "password":'',
         "port": "5432"
 }
 
